@@ -18,11 +18,11 @@ X1 = np.array(data[["G1", "G2"]])
 red = [X1[np.argwhere(z == 0)]]
 blue = [X1[np.argwhere(z == 1)]]
 print('len(red) =', len(red))
-for m,s in enumerate(red):
+for m,s in enumerate(red[0]):
     print(m)
     if m == 393:
         break
-    plt.scatter([s[0][0][m]], [s[0][0][m+1]], s=25, color="red", edgecolor='k')
+    plt.scatter(s[0][0], s[0][1], s=25, color="red", edgecolor='k')
 for m,s in enumerate(blue):
     if m == 393:
         break
